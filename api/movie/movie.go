@@ -11,7 +11,7 @@ type Movie struct {
 type MovieItem struct {
 	ID        string `json:"id"`
 	Title     string `json:"title"`
-	Completed bool   `json:"completed"`
+	Rating    string  `json:"rating"`
 }
 
 func New() *Movie {

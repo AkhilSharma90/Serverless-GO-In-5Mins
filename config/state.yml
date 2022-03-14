@@ -2,31 +2,38 @@
 # This is Mantil project state file maintained by Mantil.
 # It is stored in human readable format so you can
 # add it to git and have history of all changes.
-name: app
+name: scratch-project
 stages:
-- name: development
+- name: dev
   default: true
   node: dev
   keys:
-    public: 1SZRaq0KEgIEpigRUgXblIl364QGfX38kGL_CvTQoZM
-    private: s40xbmLTrpJvf4lpGEXvwNXvbEuRsIiUVMk_zqgN14jVJlFqrQoSAgSmKBFSBduUiXfrhAZ9ffyQYv8K9NChkw
+    public: SaLY53sIoqySGI1XMCcVxeLO31hO0XNTD2PJ3otf5rU
+    private: fkeA1O59VrPDHtG9z6iXa-G0aQgzRu_ZHSLaHKtVajlJotjnewiirJIYjVcwJxXF4s7fWE7Rc1MPY8nei1_mtQ
   endpoints:
-    rest: https://8hj8by7eh8.execute-api.ap-south-1.amazonaws.com
-    ws: wss://fi1asf1mt2.execute-api.ap-south-1.amazonaws.com
+    rest: https://2711nnrr50.execute-api.ap-south-1.amazonaws.com
+    ws: wss://i6quk4z6n6.execute-api.ap-south-1.amazonaws.com
   last_deployment:
     version: v0.2.8
-    timestamp: 1646405391090
+    timestamp: 1646629761938
   functions:
   - name: movie
-    hash: 5a52c2d4
-    s3_key: functions/app/development/movie-5a52c2d4.zip
+    hash: 66b74a67
+    s3_key: functions/scratch-project/dev/movie-66b74a67.zip
     memory_size: 128
     timeout: 900
     env:
-      MANTIL_GO_CONFIG: eyJSZXNvdXJjZVRhZ3MiOnsiTUFOVElMX0tFWSI6IjI3M2VmZGU5IiwiTUFOVElMX1BST0pFQ1QiOiJhcHAiLCJNQU5USUxfU1RBR0UiOiJkZXZlbG9wbWVudCIsIk1BTlRJTF9XT1JLU1BBQ0UiOiJDNWdoejFvUlI4S3dPX1I2ekVXQWJBIn0sIldzRm9yd2FyZGVyTmFtZSI6Im1hbnRpbC1hcHAtZGV2ZWxvcG1lbnQtd3MtZm9yd2FyZGVyLTI3M2VmZGU5IiwiTmFtaW5nVGVtcGxhdGUiOiJhcHAtZGV2ZWxvcG1lbnQtJXMtMjczZWZkZTkifQ==
+      MANTIL_GO_CONFIG: eyJSZXNvdXJjZVRhZ3MiOnsiTUFOVElMX0tFWSI6IjI3M2VmZGU5IiwiTUFOVElMX1BST0pFQ1QiOiJzY3JhdGNoLXByb2plY3QiLCJNQU5USUxfU1RBR0UiOiJkZXYiLCJNQU5USUxfV09SS1NQQUNFIjoiQzVnaHoxb1JSOEt3T19SNnpFV0FiQSJ9LCJXc0ZvcndhcmRlck5hbWUiOiJtYW50aWwtc2NyYXRjaC1wcm9qZWN0LWRldi13cy1mb3J3YXJkZXItMjczZWZkZTkiLCJOYW1pbmdUZW1wbGF0ZSI6InNjcmF0Y2gtcHJvamVjdC1kZXYtJXMtMjczZWZkZTkifQ==
       MANTIL_KEY: 273efde9
-      MANTIL_PROJECT: app
-      MANTIL_STAGE: development
-  public:
-    bucket: app-development-public-273efde9
-    hash: 34bdf5ec
+      MANTIL_PROJECT: scratch-project
+      MANTIL_STAGE: dev
+  - name: ping
+    hash: f33cc4f1
+    s3_key: functions/scratch-project/dev/ping-f33cc4f1.zip
+    memory_size: 128
+    timeout: 900
+    env:
+      MANTIL_GO_CONFIG: eyJSZXNvdXJjZVRhZ3MiOnsiTUFOVElMX0tFWSI6IjI3M2VmZGU5IiwiTUFOVElMX1BST0pFQ1QiOiJzY3JhdGNoLXByb2plY3QiLCJNQU5USUxfU1RBR0UiOiJkZXYiLCJNQU5USUxfV09SS1NQQUNFIjoiQzVnaHoxb1JSOEt3T19SNnpFV0FiQSJ9LCJXc0ZvcndhcmRlck5hbWUiOiJtYW50aWwtc2NyYXRjaC1wcm9qZWN0LWRldi13cy1mb3J3YXJkZXItMjczZWZkZTkiLCJOYW1pbmdUZW1wbGF0ZSI6InNjcmF0Y2gtcHJvamVjdC1kZXYtJXMtMjczZWZkZTkifQ==
+      MANTIL_KEY: 273efde9
+      MANTIL_PROJECT: scratch-project
+      MANTIL_STAGE: dev

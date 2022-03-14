@@ -8,13 +8,14 @@ import (
 
 type AddRequest struct {
 	Title string
+	Rating string
 }
 
-func (t *Movie) Add(ctx context.Context, req *AddRequest) error {
+func (t *Movie) Create(ctx context.Context, req *AddRequest) error {
 	id := uuid.NewString()
 	return t.kv.Put(id, &MovieItem{
 		ID:        id,
 		Title:     req.Title,
-		Completed: false,
+		Rating:    req.Rating,
 	})
 }
